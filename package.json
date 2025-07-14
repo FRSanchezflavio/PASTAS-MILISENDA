@@ -1,0 +1,38 @@
+{
+  "name": "pastas-milisenda",
+  "version": "1.0.0",
+  "description": "Proyecto Pastas Milisenda",
+  "main": "app.js",
+  "type": "module",  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node test-example.js",
+    "test": "mocha test/adoption.simple.test.js --timeout 10000",
+    "test:all": "mocha test/**/*.test.js --timeout 10000",
+    "test:watch": "mocha test/adoption.simple.test.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",  "dependencies": {
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "mongodb": "6.15",
+    "mongoose": "^8.12.2",
+    "mongoose-paginate-v2": "^1.9.0",
+    "dotenv": "^16.0.3",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.0",
+    "uuid": "^9.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1"
+  }
+}

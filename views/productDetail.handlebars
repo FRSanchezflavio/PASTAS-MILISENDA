@@ -1,0 +1,13 @@
+<h1>{{product.name}}</h1>
+<p>{{product.description}}</p>
+<p>Categoría: {{product.category}}</p>
+<p>Precio: ${{product.price}}</p>
+<p>Stock: {{product.stock}}</p>
+
+<button onclick="addToCart('{{product._id}}')">Agregar al carrito</button>
+
+<script>
+  function addToCart(productId) {
+    console.log('Agregar producto al carrito: ', productId);
+  }
+</script>

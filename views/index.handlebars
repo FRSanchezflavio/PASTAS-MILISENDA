@@ -1,0 +1,31 @@
+<h1>Productos disponibles</h1>
+
+{{#each products}}
+  <div style="border:1px solid #ccc; margin-bottom:10px; padding:10px;">
+    <h2>{{this.name}}</h2>
+    <p>{{this.description}}</p>
+    <p>Categoría: {{this.category}}</p>
+    <p>Precio: ${{this.price}}</p>
+    <p>Stock: {{this.stock}}</p>
+    
+    <a href="/products/{{this._id}}">Ver detalles</a>
+
+    <button onclick="addToCart('{{this._id}}')">Agregar al carrito</button>
+  </div>
+{{/each}}
+
+<div>
+  {{#if hasPrevPage}}
+    <a href="{{prevLink}}">Anterior</a>
+  {{/if}}
+  Página: {{page}} de {{totalPages}}
+  {{#if hasNextPage}}
+    <a href="{{nextLink}}">Siguiente</a>
+  {{/if}}
+</div>
+
+<script>
+  function addToCart(productId) {
+    console.log('Agregar producto al carrito', productId);
+  }
+</script>
