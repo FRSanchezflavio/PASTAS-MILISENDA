@@ -7,9 +7,9 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "seed": "node test-example.js",
-    "test": "mocha test/adoption.simple.test.js --timeout 10000",
+    "test": "mocha test/adoption.test.js --timeout 10000",
     "test:all": "mocha test/**/*.test.js --timeout 10000",
-    "test:watch": "mocha test/adoption.simple.test.js --watch"
+    "test:watch": "mocha test/adoption.test.js --watch"
   },
   "keywords": [],
   "author": "",

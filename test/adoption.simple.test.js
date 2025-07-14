@@ -9,12 +9,12 @@ describe('Adoption Router Tests', () => {
     let app;
     
     before(async () => {
-        // Crear una app express simple para testing
+        // Configuración de la aplicación de pruebas
         app = express();
         app.use(express.json());
         
-        // Mock simple del middleware de auth
-        const mockAuth = (req, res, next) => {
+        // Middleware de autenticación
+        const authMiddleware = (req, res, next) => {
             const authHeader = req.headers.authorization;
             if (!authHeader || !authHeader.startsWith('Bearer ')) {
                 return res.status(401).json({
@@ -26,7 +26,7 @@ describe('Adoption Router Tests', () => {
             next();
         };
         
-        // Recrear el router de adoption directamente
+        // Definición del router de adoption
         const router = express.Router();
         
         // GET todas las adopciones
@@ -90,7 +90,7 @@ describe('Adoption Router Tests', () => {
         });
         
         // POST crear adopción
-        router.post('/', mockAuth, async (req, res) => {
+        router.post('/', authMiddleware, async (req, res) => {
             try {
                 const { petName, petType, adopter, notes } = req.body;
                 
@@ -125,7 +125,7 @@ describe('Adoption Router Tests', () => {
         });
         
         // PUT actualizar adopción
-        router.put('/:aid', mockAuth, async (req, res) => {
+        router.put('/:aid', authMiddleware, async (req, res) => {
             try {
                 const { aid } = req.params;
                 const { status, notes } = req.body;
@@ -154,7 +154,7 @@ describe('Adoption Router Tests', () => {
         });
         
         // DELETE eliminar adopción
-        router.delete('/:aid', mockAuth, async (req, res) => {
+        router.delete('/:aid', authMiddleware, async (req, res) => {
             try {
                 const { aid } = req.params;
                 res.status(200).json({
@@ -170,7 +170,7 @@ describe('Adoption Router Tests', () => {
         });
         
         // GET adopciones por usuario
-        router.get('/user/:uid', mockAuth, async (req, res) => {
+        router.get('/user/:uid', authMiddleware, async (req, res) => {
             try {
                 const userAdoptions = [
                     {

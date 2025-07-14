@@ -48,7 +48,7 @@ docker push [tu-usuario]/pastas-milisenda:latest
 
 ### 7. Verificar en Docker Hub
 - Visita: https://hub.docker.com/r/[tu-usuario]/pastas-milisenda
-- Verifica que la imagen se subió correctamente
+- Confirma que la imagen se publicó correctamente
 
 ## 📋 Ejemplo Completo
 

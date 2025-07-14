@@ -48,11 +48,11 @@
  *         _id: "60d21b4667d0d8992e610c85"
  *         first_name: "Juan"
  *         last_name: "Pérez"
- *         email: "juan.perez@email.com"
+ *         email: "juan.perez@pastasmilisenda.com"
  *         age: 30
  *         role: "user"
  *         cart: "60d21b4667d0d8992e610c86"
- *         last_connection: "2024-07-14T10:30:00.000Z"
+ *         last_connection: "2025-07-14T10:30:00.000Z"
  *     
  *     UserRegister:
  *       type: object
@@ -84,7 +84,7 @@
  *       example:
  *         first_name: "María"
  *         last_name: "García"
- *         email: "maria.garcia@email.com"
+ *         email: "maria.garcia@pastasmilisenda.com"
  *         age: 25
  *         password: "miPassword123"
  *     
@@ -102,7 +102,7 @@
  *           type: string
  *           description: Contraseña del usuario
  *       example:
- *         email: "juan.perez@email.com"
+ *         email: "juan.perez@pastasmilisenda.com"
  *         password: "miPassword123"
  *     
  *     LoginResponse:
